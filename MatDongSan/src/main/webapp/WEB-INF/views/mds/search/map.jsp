@@ -23,7 +23,7 @@
 </style> 
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/classigrids-full/Template Main/assets/css/psm-room2.css" />
 <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/classigrids-full/Template Main/assets/css/psm-map.css" />
-<script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=uj41tlm8b7"></script>
+<script type="text/javascript" src="https://oapi.map.naver.com/openapi/v3/maps.js?ncpClientId=[보안인증키]"></script>
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/sockjs-client/1.5.1/sockjs.min.js"></script> -->
 <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/stomp.js/2.3.3/stomp.min.js"></script> -->
 <form id="searchForm" action="${pageContext.request.contextPath}/search/map" method="get" >
@@ -789,7 +789,7 @@ let result;
 function room2Open() {
 	
 	room2.style.display = "block";
-	let url = `http://apis.data.go.kr/1613000/BldRgstService_v2/getBrTitleInfo?sigunguCd=\${Hcode}&bjdongCd=\${Bcode}&bun=\${bun}&ji=\${ji}&ServiceKey=CaENeMZXtb%2Fjj4qNqp9nAuYZGlv%2FzXrHfRTUvI457RAGVhs9netdeLz%2BYh6zu02Kjaq5HnA2TyHcKoqbaYwVZw%3D%3D&_type=json`;
+	let url = `http://apis.data.go.kr/1613000/BldRgstService_v2/getBrTitleInfo?sigunguCd=\${Hcode}&bjdongCd=\${Bcode}&bun=\${bun}&ji=\${ji}&ServiceKey=[보안인증키]&_type=json`;
 	fetch(url)
 	  .then(response => response.json())
 	  .then(data => {
@@ -1754,133 +1754,7 @@ function buildOne() {
 								<div class="css-1dbjc4n r-1mlwlqe r-eqz5dr r-16y2uox r-1wbh5a2 r-1777fci">
 									<div dir="auto" class="css-1563yu1 css-cens5h style-2nkyq" id="style-2nkyq">\${data.roomDealingVO.roomDetailDc}</div>
 									<div class="css-1dbjc4n r-1awozwy r-18u37iz r-1h0z5md style-isiYs" id="style-isiYs">
-										<div class="zuix2-tp4 css-1dbjc4n r-1awozwy r-1loqt21 r-18u37iz r-1otgn73 r-lrvibr" tabindex="0">
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="css-1dbjc4n r-1pz39u2 r-n2h5ot r-109y4c4 r-117bsoe r-1joea0r r-1mf7evn r-1x0uki6"></div>
-						</div>
-						`;
-
-		return divStr;
-	}
-
-	function makeDivFooter(data) {
-		let divStr = `
-					<div class="css-1dbjc4n r-14lw9ot r-1udh08x r-1mdbw0j">
-									<div class="css-1dbjc4n r-1pz39u2 style-gXP5C" id="style-gXP5C"></div>
-									<div class="css-1dbjc4n r-18u37iz r-6gpygo r-1joea0r r-1mf7evn r-1s2bzr4">
-										<div class="css-1dbjc4n r-13awgt0 r-18u37iz">
-											<div class="css-1dbjc4n r-kgf08f r-eqz5dr r-1777fci r-1b7u577">`;
-
-												if(data.roomDealingVO.delngType == "전세")	{
-												divStr += `
-												<div dir="auto" class="css-1563yu1 r-aw03qq r-1wbh5a2 r-1w6e6rj r-159m18f r-1x35g6 r-b88u0q r-ueyrd6 r-fdjqy7 r-13wfysu r-q42fyq r-1ad0z5i">\${data.roomDealingVO.delngType} \${data.roomDealingVO.roomLshl}</div>
-													`;
-												}else if(data.roomDealingVO.delngType == "월세") {
-													divStr += `
-													<div dir="auto" class="css-1563yu1 r-aw03qq r-1wbh5a2 r-1w6e6rj r-159m18f r-1x35g6 r-b88u0q r-ueyrd6 r-fdjqy7 r-13wfysu r-q42fyq r-1ad0z5i">\${data.roomDealingVO.delngType}  \${data.roomDealingVO.roomDeposit}/\${data.roomDealingVO.roomMhl}</div>
-													`;
-												}else if(data.roomDealingVO.delngType == "매매") {
-													divStr += `
-													<div dir="auto" class="css-1563yu1 r-aw03qq r-1wbh5a2 r-1w6e6rj r-159m18f r-1x35g6 r-b88u0q r-ueyrd6 r-fdjqy7 r-13wfysu r-q42fyq r-1ad0z5i">\${data.roomDealingVO.delngType}  \${data.roomDealingVO.pas}</div>
-													`;
-												}
-				
-											
-											
-											divStr += `</div>
-											<div class="css-1dbjc4n r-1awozwy style-HpDf1" tabindex="0" id="animatedComponent" data-user-no="\${data.roomDealingVO.room.userNo}">
-												<div dir="auto" class="css-1563yu1 css-vcwn7f r-jwli3a r-1wbh5a2 r-1w6e6rj r-159m18f r-ubezar r-b88u0q r-135wba7 r-fdjqy7 r-13wfysu r-3s2u2q r-1ad0z5i r-184en5c" >문의하기</div>
-												<div class="css-1dbjc4n r-z2wwpe r-1p0dtai r-1d2f490 r-u8s1d r-zchlnj r-ipm5af"></div>
-											</div>
-										</div>
-									</div>
-								</div>
-					`;
-
-		return divStr;
-	}
-	
-	
-	function confirmDoc() {
-		//alert("공적장부 확인");
-		room1.style.display = "block";
-	}
-	    
-    /*******************지도 검색 클릭 이벤트******************/
-    function submit() {
-        mapInit(form.x.value, form.y.value);
-    }
-
-    /*******************li 클릭이벤트 input태그에 값 넣기********************/
-    function liClick(addressLi) {
-        addressLi.forEach(element => {
-            element.addEventListener("click", function() {
-                form.x.value = this.dataset.x;
-                form.y.value = this.dataset.y;
-                form.word.value = this.innerText;
-
-                keyword.value = this.innerText;
-				addressDiv.style.display = "none";
-            })
-        });
-
-		
-    }
-    
-	/***********주소 자동완성 로직***********/
-	keyword.addEventListener("input", debounce(addrList, 300));
-    
-    function addrList(event) {
-        let query = event.target.value;
-        //div 검색어 있으면 보이게하기
-        if(!query) {
-            addressDiv.style.display = "none";
-        }else {
-            addressDiv.style.display = "block";
-        }
-
-        fetchAddress(query)
-        .then(addresses => {
-            console.log(addresses);
-            let ulStr = "";
-            for(let addr of addresses.addr) {
-            	
-                //let address = addr.address_name;
-                let address = addr.address_name;
-                let x = addr.x;
-                let y = addr.y;
-
-                if(address.includes(addresses.keyword)) {
-                    let styleKey = address.replace(addresses.keyword, `<span style="color: #8b00ff; font-weight: bold;">\${addresses.keyword}</span>`);
-                    ulStr += `<li data-x="\${x}" data-y="\${y}">\${styleKey}</li>`;
-                }else {
-                    ulStr += `<li data-x="\${x}" data-y="\${y}">\${address}</li>`;
-                }
-            }
-          	
-            addressUl.innerHTML = ulStr;
-
-            //li클릭이벤트 주기
-            liClick(document.querySelectorAll("#keywordLi>ul>li"));
-        })
-        .catch(error => {
-            console.error('주소를 가져오는 중 오류 발생:', error);
-        });
-    }
-
-    function fetchAddress(keyword) {
-        return new Promise((resolve, reject) => {
-            setTimeout(() => {
-                if (keyword) {
-                    let url = `https://dapi.kakao.com/v2/local/search/address.json?query=\${keyword}`;
-                    
-                    fetch(url, {
-                        method : 'get',
-                        headers : {
-                            "Authorization" : "KakaoAK 5c27392c744631964a44683090bb3a0e"
+										<div class="zuix2-tp4 css-1dbjc4n r-1awozwy r-1loqt21 r-18u37iz r-1otgn73 r-lr키]"
                         }
                     }).then(resp => {
                         return resp.json();
