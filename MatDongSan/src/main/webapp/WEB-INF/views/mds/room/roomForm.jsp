@@ -1733,7 +1733,7 @@
 			function room2Open() {
 				
 				room2.style.display = "block";
-				let url = `http://apis.data.go.kr/1613000/BldRgstService_v2/getBrTitleInfo?sigunguCd=\${roomParam.roomVO.hCode}&bjdongCd=\${roomParam.roomVO.bCode}&bun=\${roomParam.roomVO.bun}&ji=\${roomParam.roomVO.ji}&ServiceKey=CaENeMZXtb%2Fjj4qNqp9nAuYZGlv%2FzXrHfRTUvI457RAGVhs9netdeLz%2BYh6zu02Kjaq5HnA2TyHcKoqbaYwVZw%3D%3D&_type=json`;
+				let url = `http://apis.data.go.kr/1613000/BldRgstService_v2/getBrTitleInfo?sigunguCd=\${roomParam.roomVO.hCode}&bjdongCd=\${roomParam.roomVO.bCode}&bun=\${roomParam.roomVO.bun}&ji=\${roomParam.roomVO.ji}&ServiceKey=[보안인증키]&_type=json`;
 				fetch(url)
 				  .then(response => response.json())
 				  .then(data => {
