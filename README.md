@@ -22,9 +22,7 @@
     - 안전한 계약 연동을 위한 임대인, 임차인 데이터 연동
     - 편리한 건물관리, 납부데이터관리를 위한 스케줄링
     - 사용자들을 위한 커뮤니티, 공지사항 기능
-
-![Detect and Extract Tables](https://file.notion.so/f/f/5e1e056a-1d2d-427a-b507-12b73fd5674a/04bf6764-9d2b-4557-8a68-7e7c4c36e34c/e7977bfe-d7fe-4814-8d06-74991c606fc6.png?id=bf0a68f4-6754-4227-8111-3ebbbdfc03bc&table=block&spaceId=5e1e056a-1d2d-427a-b507-12b73fd5674a&expirationTimestamp=1718942400000&signature=3GiqP9YXclcHzxZJH2SQo_xt2SlRxpZahHhw3LykMrQ&downloadName=%EC%A0%9C%EB%AA%A9%EC%9D%84+%EC%9E%85%EB%A0%A5%ED%95%B4%EC%A3%BC%EC%84%B8%EC%9A%94_-001.png)
-
+![맛동산_로고](https://gitub.com/SungminPark-FLOYD/MatDongSan/assets/107343662/b1385f7a-1e46-4234-b078-b89b4e36f951)
 
 ### 🙋‍♂️ 역할
 
